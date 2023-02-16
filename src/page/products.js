@@ -1,18 +1,9 @@
+import productList from "@/components/productList";
 import { products } from "../data"
 const productsPage = () => {
-  console.log(products);
-  return ` <div class="row">
-    ${
-      products.map((products)=>{
-            return `
-            <div class="col">
-            <h3>${products.name}</h3>
-            <span>${products.price}</span>
-            </div>
-            `
-      })
-    }
-  </div>`
+return ` <div class="row">
+      ${productList({products : products})}
+</div>`
 };
 
 export default productsPage
